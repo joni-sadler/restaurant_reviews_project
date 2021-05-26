@@ -1,7 +1,7 @@
 import React from "react";
 
-function Restaurants() {
-  return <div className="App">Hello world.</div>;
+function Restaurant() {
+  return <div>Restaurant</div>;
 }
 
-export default Restaurants;
+export default Restaurant;
