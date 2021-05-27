@@ -13,6 +13,10 @@ class RestaurantDataService {
     return http.get(`?${by}=${query}&page=${page}`);
   }
 
+  createReview(data) {
+    return http.post("/review", data);
+  }
+
   updateReview(data) {
     return http.put("/review", data);
   }

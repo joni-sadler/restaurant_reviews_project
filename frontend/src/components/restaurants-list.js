@@ -75,7 +75,11 @@ const RestaurantsList = (props) => {
   };
 
   const findByCuisine = () => {
-    find(searchCuisine, "cuisine");
+    if (searchCuisine == "All Cuisines") {
+      refreshList();
+    } else {
+      find(searchCuisine, "cuisine");
+    }
   };
 
   return (
@@ -104,9 +108,10 @@ const RestaurantsList = (props) => {
             type="text"
             className="form-control"
             placeholder="Search by zip"
-            value={findByZip}
+            value={searchZip}
+            onChange={onChangeSearchZip}
           />
-          <div className="input-grou-append">
+          <div className="input-group-append">
             <button
               className="btn btn-outline-secondary"
               type="button"
